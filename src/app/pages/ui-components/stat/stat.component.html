@@ -1,0 +1,11 @@
+<div class="col-lg-10">
+  <mat-card class="cardWithShadow">
+    <mat-card-content class="p-24">
+      <h2>Statistiques des compétitions</h2>
+      <div class="chart-container">
+        <!-- Utilisation du composant apx-chart avec les options fournies via [series] et [chart] -->
+        <apx-chart [series]="barChartOptions.series" [chart]="barChartOptions.chart"></apx-chart>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

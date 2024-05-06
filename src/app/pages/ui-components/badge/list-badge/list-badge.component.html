@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="row">
+<app-sidebar></app-sidebar>
+  <div class="col-md-6">
+    <button type="submit" mat-flat-button color="primary" (click)="naviguerVersAjoutBadge(competitionId)" class="mb-3">Ajouter un badge</button>
+
+    <div *ngIf="badges.length > 0; else noBadges">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let badge of badges">
+          <div class="badge-item mb-3"> <!-- Ajout de la classe mb-3 pour la marge en bas -->
+            <h3>{{ badge.name }}</h3>
+            <p>{{ badge.description }}</p>
+            <p>{{ badge.user }}</p>
+
+            <img *ngIf="badge.description === 'GOLD'" src="assets/img/gallery/gold.jpg" alt="Gold Badge" />
+            <img *ngIf="badge.description === 'SILVER'" src="assets/img/gallery/silver.png" alt="Silver Badge" />
+            <img *ngIf="badge.description === 'BRONZE'" src="assets/img/gallery/bronze.jpg" alt="Bronze Badge" />
+            <img *ngIf="badge.description === 'PLATINUM'" src="assets/img/gallery/plati.png" alt="Platinum Badge" />
+
+            <!-- Autres détails du badge à afficher -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #noBadges>
+      <p>Aucun badge disponible pour le moment.</p>
+    </ng-template>
+  </div>
+</div>

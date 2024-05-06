@@ -13,9 +13,9 @@ export const navItems: NavItem[] = [
     navCap: 'Ui Components',
   },
   {
-    displayName: 'Badge',
+    displayName: 'competition',
     iconName: 'rosette',
-    route: '/ui-components/badge',
+    route: '/ui-components/competition',
   },
   {
     displayName: 'Chips',

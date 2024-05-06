@@ -2,9 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { FullComponent } from './layouts/full/full.component';
+import {ListBadgeComponent} from "./pages/ui-components/badge/list-badge/list-badge.component";
+import {AddBadgeComponent} from "./pages/ui-components/badge/add-badge/add-badge.component";
+import {EditercompetitionComponent} from "./pages/ui-components/editercompetition/editercompetition.component";
+import {ListUserComponent} from "./pages/ui-components/user/list-user/list-user.component";
 
 const routes: Routes = [
   {
+
+
     path: '',
     component: FullComponent,
     children: [
@@ -18,6 +24,7 @@ const routes: Routes = [
         loadChildren: () =>
           import('./pages/pages.module').then((m) => m.PagesModule),
       },
+
       {
         path: 'ui-components',
         loadChildren: () =>
@@ -45,6 +52,10 @@ const routes: Routes = [
       },
     ],
   },
+  { path: 'badge/:id', component: ListBadgeComponent },
+  { path: 'edit-competition/:id', component: EditercompetitionComponent },
+  { path: 'ajouter-badge/:idCompet', component: AddBadgeComponent },
+  { path: 'users/:id', component: ListUserComponent },
 ];
 
 @NgModule({

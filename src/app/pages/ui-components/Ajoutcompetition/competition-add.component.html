@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+  <div class="col-md-6 form-container-3d">
+    <form [formGroup]="competitionForm" (ngSubmit)="addCompetition()" class="m-t-30 custom-form">
+      <div class="form-group">
+        <label class="form-label">Nom de la compétition :</label>
+        <input type="text" formControlName="name" class="form-control" placeholder="Nom de la compétition">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Description :</label>
+        <textarea formControlName="description" class="form-control" placeholder="Description"></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label class="form-label">Date de début :</label>
+          <input type="date" formControlName="startDate" class="form-control" placeholder="Date de début">
+        </div>
+        <div class="form-group col-md-6">
+          <label class="form-label">Date de fin :</label>
+          <input type="date" formControlName="endDate" class="form-control" placeholder="Date de fin">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-check">
+          <input type="checkbox" formControlName="isOnline" class="form-check-input" id="isOnline">
+          <label class="form-check-label" for="isOnline">En ligne</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Lieu :</label>
+        <input type="text" formControlName="location" class="form-control" placeholder="Lieu">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Type de compétition :</label>
+        <select formControlName="typeC" class="form-control" placeholder="Sélectionner le type">
+          <option *ngFor="let type of typeCValues" [value]="type">{{ type }}</option>
+        </select>
+      </div>
+
+      <button type="submit" mat-flat-button color="primary" class="btn-submit">Ajouter</button>
+    </form>
+  </div>
+</div>

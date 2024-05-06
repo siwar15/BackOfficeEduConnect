@@ -6,15 +6,19 @@ import { AppChipsComponent } from './chips/chips.component';
 import { AppListsComponent } from './lists/lists.component';
 import { AppMenuComponent } from './menu/menu.component';
 import { AppTooltipsComponent } from './tooltips/tooltips.component';
+import {AffichercompetitionComponent} from "./affichercompetition/affichercompetition.component";
+import {ListBadgeComponent} from "./badge/list-badge/list-badge.component";
 
 export const UiComponentsRoutes: Routes = [
   {
+
     path: '',
     children: [
       {
-        path: 'badge',
-        component: AppBadgeComponent,
+        path: 'competition',
+        component: AffichercompetitionComponent,
       },
+
       {
         path: 'chips',
         component: AppChipsComponent,
@@ -33,4 +37,5 @@ export const UiComponentsRoutes: Routes = [
       },
     ],
   },
+
 ];

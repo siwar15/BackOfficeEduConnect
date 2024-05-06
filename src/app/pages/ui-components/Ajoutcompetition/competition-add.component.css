@@ -1,0 +1,59 @@
+.buttons-container-3d {
+  perspective: 1000px;
+}
+
+.custom-button-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.custom-button-3d:hover {
+  transform: rotateY(10deg);
+}
+
+
+
+
+.form-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.form-3d:hover {
+  transform: rotateY(10deg);
+}
+
+.btn-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.btn-3d:hover {
+  transform: rotateY(10deg);
+}
+
+.form-container-3d {
+  width: 500%; /* Modifiez la largeur selon vos besoins */
+  max-width: 1000px; /* Définissez une largeur maximale si nécessaire */
+  margin: 0 auto; /* Pour centrer le formulaire horizontalement */
+}
+
+.custom-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 40px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 20px;
+}
