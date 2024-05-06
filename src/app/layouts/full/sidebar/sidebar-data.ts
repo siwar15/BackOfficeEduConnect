@@ -63,4 +63,14 @@ export const navItems: NavItem[] = [
     iconName: 'aperture',
     route: '/extra/sample-page',
   },
+  {
+    displayName: 'Afficher Cours',
+    iconName: 'aperture',
+    route: '/ui-components/course',
+  },
+  {
+    displayName: 'Afficher Documents',
+    iconName: 'aperture',
+    route: '/ui-components/document',
+  },
 ];

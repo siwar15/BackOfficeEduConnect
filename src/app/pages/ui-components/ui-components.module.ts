@@ -17,6 +17,13 @@ import { AppListsComponent } from './lists/lists.component';
 import { AppMenuComponent } from './menu/menu.component';
 import { AppTooltipsComponent } from './tooltips/tooltips.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { CourseComponent } from './course/course.component';
+import { CourseFormComponent } from './course-form/course-form.component';
+import { CourseUpdateComponent } from './course-update/course-update.component';
+import { DocumentComponent } from './document/document.component';
+import { DocumentFormComponent } from './document-form/document-form.component';
+import { DocumentUpdateComponent } from './document-update/document-update.component';
+import { CourseDetailsComponent } from './course-details/course-details.component';
 
 @NgModule({
   imports: [
@@ -34,6 +41,13 @@ import { MatNativeDateModule } from '@angular/material/core';
     AppListsComponent,
     AppMenuComponent,
     AppTooltipsComponent,
+    CourseComponent,
+    CourseFormComponent,
+    CourseUpdateComponent,
+    DocumentComponent,
+    DocumentFormComponent,
+    DocumentUpdateComponent,
+    CourseDetailsComponent,
   ],
 })
 export class UicomponentsModule {}
