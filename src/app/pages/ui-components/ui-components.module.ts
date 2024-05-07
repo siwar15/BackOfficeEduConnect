@@ -40,6 +40,7 @@ import {AppNavItemComponent} from "../../layouts/full/sidebar/nav-item/nav-item.
 import {BrandingComponent} from "../../layouts/full/sidebar/branding.component";
 import {StatComponent} from "./stat/stat.component";
 import {PrizeListComponent} from "./Prize-list/Prize-list.component";
+import { ChatroomComponent } from './chatroom/chatroom.component';
 
 @NgModule({
   imports: [
@@ -83,6 +84,7 @@ import {PrizeListComponent} from "./Prize-list/Prize-list.component";
     DocumentFormComponent,
     DocumentUpdateComponent,
     CourseDetailsComponent,
+    ChatroomComponent,
   ],
   exports: [
     HeaderComponent,
