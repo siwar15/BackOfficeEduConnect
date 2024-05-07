@@ -12,7 +12,7 @@ export class AppSideRegisterComponent {
   form = new FormGroup({
     uname: new FormControl('', [Validators.required, Validators.minLength(6)]),
     email: new FormControl('', [Validators.required]),
-    password: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),//test
   });
 
   get f() {
