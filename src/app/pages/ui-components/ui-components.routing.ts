@@ -69,7 +69,7 @@ export const UiComponentsRoutes: Routes = [
         component: DocumentUpdateComponent,
       },
       {
-        path: 'updatedocument/:documentID',
+        path: 'chatroom',
         component: ChatroomComponent,
       },
     ],
