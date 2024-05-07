@@ -13,9 +13,14 @@ export const navItems: NavItem[] = [
     navCap: 'Ui Components',
   },
   {
-    displayName: 'Badge',
+    displayName: 'Gerer Room',
     iconName: 'rosette',
-    route: '/ui-components/badge',
+    route: '/ui-components/displayRooms',
+  },
+  {
+    displayName: 'chatRoom',
+    iconName: 'rosette',
+    route: '/ui-components/chatroom',
   },
   {
     displayName: 'Chips',
@@ -41,7 +46,7 @@ export const navItems: NavItem[] = [
     navCap: 'Auth',
   },
   {
-    displayName: 'Login',
+    displayName: 'Logout',
     iconName: 'lock',
     route: '/authentication/login',
   },

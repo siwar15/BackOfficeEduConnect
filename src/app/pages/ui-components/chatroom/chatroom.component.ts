@@ -32,6 +32,8 @@ export class ChatroomComponent {
 
   ngOnInit(): void {
     this.username = localStorage.getItem('username');
+
+
     this.fetchRooms();
     
   }
@@ -147,10 +149,5 @@ export class ChatroomComponent {
      
     });
   }
-  logout(): void {
-    // Clear local storage
-    localStorage.clear();
-    // Redirect to login page or home page
-    this.router.navigate(['/login']); // Adjust the route as per your application's routing configuration
-  }
+ 
 }

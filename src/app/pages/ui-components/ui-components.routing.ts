@@ -7,6 +7,9 @@ import { AppListsComponent } from './lists/lists.component';
 import { AppMenuComponent } from './menu/menu.component';
 import { AppTooltipsComponent } from './tooltips/tooltips.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
+import { AddroomComponent } from './addroom/addroom.component';
+import { DisplayroomsComponent } from './displayrooms/displayrooms.component';
+import { EditRoomsComponent } from './edit-rooms/edit-rooms.component';
 
 export const UiComponentsRoutes: Routes = [
   {
@@ -36,7 +39,20 @@ export const UiComponentsRoutes: Routes = [
         path: 'chatroom',
         component: ChatroomComponent,
       },
-      
+      {
+        path: 'displayRooms',
+        component: DisplayroomsComponent,
+      },
+      {
+        path: 'addRoom',
+        component: AddroomComponent,
+      },
+      {
+        path: 'editRoom/:id',
+        component: EditRoomsComponent,
+      },
+    
+    
       
     ],
   },

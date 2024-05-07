@@ -1,0 +1,33 @@
+
+
+<div class="container-fluid" *ngIf="roomformGroup">
+    <div  class="panel panel-default">
+    <div class="panel panel-heading">Add Room</div>
+    <div class="panel panel-body">
+        <form  [formGroup]="roomformGroup" >
+    
+       
+            <div class="form-group">
+                <label for="designation">Title</label>
+                <input class="form-control" type="text" name="title"  formControlName="name" 
+                [ngClass]="{'is-invalid':submited && roomformGroup.controls['name'].errors}" >
+                <div *ngIf="submited && roomformGroup.controls['name'].errors" class="invalid-feedback" class="alert alert-danger">
+                    <div *ngIf="roomformGroup.controls['name'].errors['required']" class="invalid-feedback">name is Required </div>
+                </div>
+            </div>
+          
+    
+            <div class="form-group">
+                <label for="designation">Description</label>
+                <input class="form-control" type="text" name="description" formControlName="description"  
+                [ngClass]="{'is-invalid':submited && roomformGroup.controls['description'].errors}" >
+                <div *ngIf="submited && roomformGroup.controls['description'].errors" class="invalid-feedback" class="alert alert-danger">
+                    <div *ngIf="roomformGroup.controls['description'].errors['required']" class="invalid-feedback">description is Required </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-ok" (click)="add_Room()"> create</button> <button (click)="cancel()" class="btn btn-default"> cancel</button>
+        </form>
+    
+    </div>
+    </div>
+    </div>

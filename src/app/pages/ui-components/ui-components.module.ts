@@ -18,6 +18,9 @@ import { AppMenuComponent } from './menu/menu.component';
 import { AppTooltipsComponent } from './tooltips/tooltips.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ChatroomComponent } from './chatroom/chatroom.component';
+import { AddroomComponent } from './addroom/addroom.component';
+import { DisplayroomsComponent } from './displayrooms/displayrooms.component';
+import { EditRoomsComponent } from './edit-rooms/edit-rooms.component';
 
 @NgModule({
   imports: [
@@ -36,6 +39,9 @@ import { ChatroomComponent } from './chatroom/chatroom.component';
     AppMenuComponent,
     AppTooltipsComponent,
     ChatroomComponent,
+    AddroomComponent,
+    DisplayroomsComponent,
+    EditRoomsComponent,
   ],
 })
 export class UicomponentsModule {}

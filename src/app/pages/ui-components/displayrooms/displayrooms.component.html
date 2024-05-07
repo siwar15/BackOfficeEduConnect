@@ -1,0 +1,41 @@
+<div class="container" >
+
+    <div class="row">
+        <button class="btn btn-primary" (click)="addRoom()">Add Room</button>
+    </div>
+    <div class="row" *ngIf="rooms">
+      <div class="col-md-4" *ngFor="let room of rooms">
+        <div class="panel">
+          <div class="panel panel-heading">{{ room.name }}</div>
+          <div class="panel-body">
+            <a
+            
+              class="btn btn-default"
+              id="btn-edit"
+              (click)="onEdit(room.id)"
+              aria-label="Settings"
+            >
+            Edit
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </a>
+  
+            <a
+              class="btn btn-danger"
+              (click)="onDelete(room.id)"
+              aria-label="Delete"
+            > Delete
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </a>
+            <img
+              class="card-img-top"
+              src="assets/images/roomChat.jpg"
+              alt="Card image"
+              style="width: 300px"
+            />
+            <p class="card-text">{{ room.description }}</p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

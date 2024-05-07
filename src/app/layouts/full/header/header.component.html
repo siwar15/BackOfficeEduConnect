@@ -26,11 +26,12 @@
   <a
     mat-flat-button
     color="primary"
-    href="https://adminmart.com/"
+    
     target="_blank"
     class="d-flex justify-content-center"
+    (click)="logout()"
   >
-    Download Free
+  Logout
   </a>
   <button
     mat-icon-button
@@ -64,7 +65,7 @@
     </button>
 
     <div class="p-x-12 m-t-12">
-      <a
+      <a 
         [routerLink]="['/authentication/login']"
         mat-stroked-button
         color="primary"

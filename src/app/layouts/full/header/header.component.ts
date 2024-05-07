@@ -6,6 +6,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,5 +23,13 @@ export class HeaderComponent {
 
   showFiller = false;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog,private router:Router) {}
+
+
+  logout(): void {
+    // Clear local storage
+    localStorage.clear();
+    // Redirect to login page or home page
+    this.router.navigate(['/authentication/login']); // Adjust the route as per your application's routing configuration
+  }
 }
