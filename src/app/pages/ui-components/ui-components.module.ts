@@ -76,6 +76,13 @@ import {PrizeListComponent} from "./Prize-list/Prize-list.component";
     AppListsComponent,
     AppMenuComponent,
     AppTooltipsComponent,
+    CourseComponent,
+    CourseFormComponent,
+    CourseUpdateComponent,
+    DocumentComponent,
+    DocumentFormComponent,
+    DocumentUpdateComponent,
+    CourseDetailsComponent,
   ],
   exports: [
     HeaderComponent,
