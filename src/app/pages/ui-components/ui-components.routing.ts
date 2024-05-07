@@ -8,6 +8,8 @@ import { AppMenuComponent } from './menu/menu.component';
 import { AppTooltipsComponent } from './tooltips/tooltips.component';
 import {AffichercompetitionComponent} from "./affichercompetition/affichercompetition.component";
 import {ListBadgeComponent} from "./badge/list-badge/list-badge.component";
+import {PrizeListComponent} from "./Prize-list/Prize-list.component";
+import {StatComponent} from "./stat/stat.component";
 
 export const UiComponentsRoutes: Routes = [
   {
@@ -20,16 +22,16 @@ export const UiComponentsRoutes: Routes = [
       },
 
       {
-        path: 'chips',
-        component: AppChipsComponent,
+        path: 'Prize',
+        component: PrizeListComponent,
       },
       {
         path: 'lists',
         component: AppListsComponent,
       },
       {
-        path: 'menu',
-        component: AppMenuComponent,
+        path: 'stat',
+        component: StatComponent,
       },
       {
         path: 'tooltips',

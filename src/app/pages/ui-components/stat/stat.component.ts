@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { CompetService } from "../../../services/Compet.Service";
-import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-stat',
@@ -48,10 +47,21 @@ export class StatComponent implements OnInit {
 
   ngOnInit(): void {
     this.compService.countBadgesPerCompetition().subscribe(
-      (data: Map<string, number>) => {
-        if (data && data.size > 0) {
-          this.barChartOptions.xaxis.categories = Array.from(data.keys());
-          this.barChartOptions.series[0].data = Array.from(data.values());
+      (data: any) => {
+        if (data && Object.keys(data).length > 0) {
+          const categories = [];
+          const seriesData = [];
+          console.log(data)
+
+          // Convertir les données JSON en tableau de clés et de valeurs
+          for (const key in data) {
+            categories.push(key);
+            seriesData.push(data[key]);
+          }
+
+          // Mettre à jour les options du graphique avec les données converties
+          this.barChartOptions.xaxis.categories = categories;
+          this.barChartOptions.series[0].data = seriesData;
         } else {
           console.error('Les données reçues ne sont pas valides pour le graphique.');
         }

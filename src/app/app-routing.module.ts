@@ -6,6 +6,7 @@ import {ListBadgeComponent} from "./pages/ui-components/badge/list-badge/list-ba
 import {AddBadgeComponent} from "./pages/ui-components/badge/add-badge/add-badge.component";
 import {EditercompetitionComponent} from "./pages/ui-components/editercompetition/editercompetition.component";
 import {ListUserComponent} from "./pages/ui-components/user/list-user/list-user.component";
+import {AffichercompetitionComponent} from "./pages/ui-components/affichercompetition/affichercompetition.component";
 
 const routes: Routes = [
   {
@@ -56,6 +57,8 @@ const routes: Routes = [
   { path: 'edit-competition/:id', component: EditercompetitionComponent },
   { path: 'ajouter-badge/:idCompet', component: AddBadgeComponent },
   { path: 'users/:id', component: ListUserComponent },
+  { path: 'compet', component: AffichercompetitionComponent },
+
 ];
 
 @NgModule({

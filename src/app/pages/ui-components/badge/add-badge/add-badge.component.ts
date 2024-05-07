@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {BadgeService} from "../../../../services/Badge.service";
@@ -18,6 +18,7 @@ export class AddBadgeComponent implements   OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private formBuilder: FormBuilder,
     private badgeService: BadgeService,
     private _snackBar: MatSnackBar
@@ -73,6 +74,7 @@ export class AddBadgeComponent implements   OnInit {
             console.log('Badge added successfully:', response);
             this._snackBar.open('Badge added successfully!', 'Close', { duration: 3000 });
             this.badgeForm.reset();
+            this.router.navigate(['badge', competitionId]);
           },
           error: error => {
             console.error('Error assigning badge:', error);

@@ -5,20 +5,25 @@
 
     <section class="section-padding col-lg-9 col-12 text-left ml-0">
       <!-- Barre de recherche -->
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Rechercher par nom" aria-label="Rechercher par nom" [(ngModel)]="searchTerm" (input)="filterCompetitions()">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button" (click)="filterCompetitions()">Effacer</button>
-        </div>
-      </div>
+      <mat-form-field appearance="outline" class="w-100" color="primary">
+        <mat-label>Rechercher par nom</mat-label>
+        <input matInput placeholder="Rechercher par nom" [(ngModel)]="searchTerm" (input)="filterCompetitions()">
 
+
+
+      </mat-form-field>
+
+
+
+    <!-- Boutons en haut de la section -->
       <!-- Boutons en haut de la section -->
       <!-- Boutons en haut de la section -->
       <div class="text-center mt-4">
-        <button type="submit" mat-flat-button color="primary" (click)="filterOnline()" class="custom-buttonn blue-button">Online</button>
-        <button type="submit" mat-flat-button color="primary" (click)="filterOffline()" class="custom-buttonn blue-button">Offline</button>
-        <button type="submit" mat-flat-button color="primary" (click)="openAddCompetitionForm()" class="custom-buttonn blue-button">Add</button>
+        <button type="submit" mat-flat-button color="primary" (click)="filterOnline()" class="custom-button">Online</button>
+        <button type="submit" mat-flat-button color="primary" (click)="filterOffline()" class="custom-button">Offline</button>
+        <button type="submit" mat-flat-button color="primary" (click)="openAddCompetitionForm()" class="custom-button">Add</button>
       </div>
+
 
       <br>
       <br>
@@ -36,20 +41,22 @@
                 <p class="competition-info"><strong>Lieu :</strong> {{ competition.location }}</p>
                 <div class="actions">
                   <!-- Icône pour l'édition -->
-                  <button class="btn custom-button btn-lg" (click)="editCompetition(competition.idC)">
-                    <mat-icon class="custom-icon">edit</mat-icon>
-                  </button>
-                  <!-- Icône pour la suppression -->
-                  <button class="btn custom-button btn-lg" (click)="deleteCompetition(competition.idC)">
-                    <mat-icon class="custom-icon">delete</mat-icon>
-                  </button>
-                  <!-- Icône pour les badges -->
-                  <button class="btn custom-button btn-lg" (click)="navigateToBadges(competition.idC)">
-                    <mat-icon class="custom-icon">badge</mat-icon>
-                  </button>
-                  <button class="btn custom-button btn-lg" (click)="navigateToUsers(competition.idC)">
-                    <mat-icon class="custom-icon">people</mat-icon>
-                  </button>
+                  <mat-icon class="custom-icon" (click)="editCompetition(competition.idC)">edit</mat-icon>
+
+
+                  <!-- Bouton et icône pour la suppression -->
+                    <mat-icon class="custom-icon"  (click)="deleteCompetition(competition.idC)">delete</mat-icon>
+
+
+                  <!-- Bouton et icône pour les badges -->
+
+                    <mat-icon class="custom-icon"(click)="navigateToBadges(competition.idC)">badge</mat-icon>
+
+
+                  <!-- Bouton et icône pour les utilisateurs -->
+
+                    <mat-icon class="custom-icon"(click)="navigateToUsers(competition.idC)">people</mat-icon>
+
 
                 </div>
 

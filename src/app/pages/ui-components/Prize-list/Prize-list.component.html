@@ -1,11 +1,5 @@
 <div class="container-fluid">
-  <app-header></app-header>
-
-  <div class="row">
-    <div class="col-md-3">
-      <app-sidebar></app-sidebar>
-    </div>
-
+  <div class="row justify-content-center"> <!-- Utilisation de la classe justify-content-center pour centrer le tableau -->
     <div class="col-md-9">
       <mat-card class="cardWithShadow">
         <mat-card-content class="p-24">
@@ -13,7 +7,7 @@
           <!-- Tableau des prix -->
           <div class="table-responsive m-t-16">
             <div class="table-container">
-              <table class="table table-bordered">
+              <table class="table table-bordered table-lg"> <!-- Ajout de la classe table-lg pour agrandir le tableau -->
                 <thead>
                 <tr>
                   <th style="width: 10%">ID</th>
@@ -29,7 +23,6 @@
                     <td>{{ prize.description }}</td>
                     <td>{{ prize.name }}</td>
                     <td>{{ prize.value }}</td>
-
                     <td>
                       <!-- Bouton pour supprimer le prix -->
                       <button mat-raised-button color="warn" (click)="deletePrize(prize.idP)">Supprimer</button>
@@ -46,7 +39,6 @@
             <button mat-raised-button color="primary" (click)="toggleAddForm()">Ajouter Prix</button>
           </div>
 
-          <!-- Formulaire pour ajouter un nouveau prix (initiallement caché) -->
           <!-- Formulaire pour ajouter un nouveau prix (initiallement caché) -->
           <div *ngIf="showAddForm" class="mt-3">
             <mat-card class="cardWithShadow">

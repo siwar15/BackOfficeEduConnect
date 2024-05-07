@@ -91,9 +91,10 @@ export class EditercompetitionComponent implements OnInit {
           this._snackBar.open('Compétition éditée avec succès !', 'Fermer', {
             duration: 2000, // Durée d'affichage du message en millisecondes
           });
+          this.router.navigate(['/ui-components/competition']);
           // Naviguer vers la liste des compétitions après un court délai
           setTimeout(() => {
-            this.router.navigate(['/lister']);
+
           }, 2000);
         },
         (error) => {

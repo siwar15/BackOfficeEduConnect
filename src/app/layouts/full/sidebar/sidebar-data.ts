@@ -18,15 +18,17 @@ export const navItems: NavItem[] = [
     route: '/ui-components/competition',
   },
   {
-    displayName: 'Chips',
+    displayName: 'prizes',
     iconName: 'poker-chip',
-    route: '/ui-components/chips',
+    route: '/ui-components/Prize',
   },
+
   {
-    displayName: 'Lists',
+    displayName: 'Statistiques',
     iconName: 'list',
-    route: '/ui-components/lists',
+    route: '/ui-components/stat',
   },
+
   {
     displayName: 'Menu',
     iconName: 'layout-navbar-expand',

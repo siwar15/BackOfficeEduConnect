@@ -52,7 +52,8 @@ export class CompetitionAddComponent  implements OnInit {
           console.log('Compétition ajoutée avec succès', result);
           this.openSnackBar('Compétition ajoutée avec succès !', 'Fermer');
           this.dialogRef.close();
-          this.router.navigate(['/competitions']);
+          window.location.reload();
+
         },
         (error) => {
           console.error('Erreur lors de l\'ajout de la compétition', error);

@@ -32,6 +32,7 @@ import {HeaderComponent} from "../../layouts/full/header/header.component";
 import {AppNavItemComponent} from "../../layouts/full/sidebar/nav-item/nav-item.component";
 import {BrandingComponent} from "../../layouts/full/sidebar/branding.component";
 import {StatComponent} from "./stat/stat.component";
+import {PrizeListComponent} from "./Prize-list/Prize-list.component";
 
 @NgModule({
   imports: [
@@ -50,6 +51,7 @@ import {StatComponent} from "./stat/stat.component";
 
   ],
   declarations: [
+    PrizeListComponent,
     StatComponent,
     BrandingComponent,
     AppNavItemComponent,

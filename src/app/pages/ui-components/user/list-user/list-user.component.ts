@@ -4,6 +4,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {User} from "../../../../Modele/User";
 import {Badge} from "../../../../Modele/Badge";
 import {CompetService} from "../../../../services/Compet.Service";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 
 
@@ -19,7 +20,7 @@ export class ListUserComponent implements OnInit {
   users: any[] = [];
   public searchEmail: string = '';
 
-    constructor(private competservice: CompetService, private route: ActivatedRoute) { }
+    constructor(private competservice: CompetService, private route: ActivatedRoute,private _snackBar: MatSnackBar) { }
   currentPage: number = 1;
   itemsPerPage: number = 3;
 
@@ -73,18 +74,21 @@ export class ListUserComponent implements OnInit {
     this.competservice.addScore(userId, competitionId, percentage).subscribe(
       (data) => {
         console.log('Score assigned successfully:', data);
+
         // Supprimer l'utilisateur du tableau après attribution du score
-        const index = this.users.findIndex(user => user.id === userId);
-        if (index !== -1) {
-          this.users.splice(index, 1);
-          location.reload();
-        }
+
       },
       (error) => {
         console.error('Une erreur s\'est produite lors de l\'attribution du score : ', error);
+        this._snackBar.open('Score attribué à l\'utilisateur avec succès !', 'Fermer', {
+          duration: 3000, // Durée d'affichage de la notification en millisecondes (3 secondes dans cet exemple)
+          horizontalPosition: 'center', // Position horizontale de la notification
+          verticalPosition: 'top' // Position verticale de la notification
+        });
       }
     );
   }
+
 
   clearSearch(): void {
     this.searchEmail = '';

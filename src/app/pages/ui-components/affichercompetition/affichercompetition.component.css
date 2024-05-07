@@ -85,4 +85,41 @@
 .custom-icon:hover {
   color: blue; /* Couleur des icônes au survol */
 }
+/* Style de la barre de recherche */
+.input-group {
+  width: 100%; /* Occupera toute la largeur de la section */
+}
+
+/* Style du bouton Effacer */
+.input-group-append button {
+  background-color: blue; /* Couleur de fond bleue */
+  color: white; /* Couleur du texte en blanc */
+}
+
+/* Style du texte dans la barre de recherche */
+.input-group input {
+  border-radius: 0; /* Supprime les coins arrondis */
+}
+/* Style des boutons personnalisés */
+.custom-button {
+  background-color: #2063F1; /* Couleur de fond bleue */
+  color: #FFFFFF; /* Couleur du texte en blanc */
+  border: none; /* Suppression de la bordure */
+  padding: 10px 20px; /* Espacement interne */
+  border-radius: 5px; /* Coins arrondis */
+  font-size: 16px; /* Taille de police */
+  cursor: pointer; /* Curseur pointeur */
+  transition: all 0.3s ease; /* Transition fluide */
+}
+
+/* Style des boutons au survol */
+.custom-button:hover {
+  background-color: #1A4DA1; /* Couleur de fond bleue plus foncée */
+}
+
+/* Ajout d'un espace entre les boutons */
+.custom-button + .custom-button {
+  margin-left: 20px; /* Espacement entre les boutons */
+}
+
 
