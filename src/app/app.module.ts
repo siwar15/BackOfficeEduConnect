@@ -30,8 +30,10 @@ import {UicomponentsModule} from "./pages/ui-components/ui-components.module";
     AppComponent,
     FullComponent,
     BlankComponent,
-
-
+    SidebarComponent,
+    HeaderComponent,
+    BrandingComponent,
+    AppNavItemComponent,
 
   ],
   imports: [
