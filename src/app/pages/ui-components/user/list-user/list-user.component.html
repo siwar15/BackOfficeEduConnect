@@ -1,0 +1,83 @@
+<div class="container-fluid">
+
+<app-header></app-header>
+  <div class="row">
+    <div class="col-md-3">
+<app-sidebar></app-sidebar>
+    </div>
+
+    <div class="col-md-9">
+      <mat-card class="cardWithShadow">
+        <mat-card-content class="p-24">
+
+          <!-- Champ de recherche par email -->
+          <div class="mb-3">
+            <mat-form-field appearance="fill">
+              <mat-label>Recherche par email</mat-label>
+              <input matInput [(ngModel)]="searchEmail" placeholder="Entrez l'email">
+            </mat-form-field>
+          </div>
+          <!-- Tableau des utilisateurs et de leurs badges -->
+          <div class="table-responsive m-t-16">
+            <div class="table-container">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th style="width: 10%">User ID</th>
+
+                  <th style="width: 20%">EmailAdd</th>
+                  <th style="width: 20%">Firstname</th>
+                  <th style="width: 20%">lastName</th>
+                  <th style="width: 30%">Score</th>
+                  <th style="width: 20%">Actions</th> <!-- Nouvelle colonne pour les actions -->
+
+                </tr>
+                </thead>
+                <tbody>
+
+
+                      <ng-container *ngFor="let user of filteredUsers.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)">
+                        <tr>
+                        <tr>
+                          <td>{{ user.id }}</td>
+
+
+                        <td>{{ user.emailAddress }}</td>
+                        <td>{{ user.firstName }}</td>
+                        <td>{{ user.lastName }}</td>
+
+                          <td>
+                            <!-- Champ d'entrée pour le score -->
+                            <mat-form-field appearance="fill">
+                              <mat-label>Score</mat-label>
+                              <input matInput type="number" [(ngModel)]="user.score">
+                            </mat-form-field>
+                          </td>
+                          <td>
+                            <!-- Bouton pour attribuer le score -->
+                            <button mat-raised-button color="primary" (click)="assignScore(user.id, user.score)">Assigner</button>
+                    </td>
+                  </tr>
+                </ng-container>
+                </tbody>
+
+              </table>
+            </div>
+          </div>
+        </mat-card-content>
+
+        <div class="pagination">
+          <button class="btn btn-link" (click)="previousPage()" [disabled]="isPreviousPageDisabled">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span>{{ currentPage }}/{{ totalPages }}</span>
+          <button class="btn btn-link" (click)="nextPage()" [disabled]="isNextPageDisabled">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </mat-card>
+
+
+    </div>
+  </div>
+</div>

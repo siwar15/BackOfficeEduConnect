@@ -1,0 +1,72 @@
+<div class="container-fluid">
+
+  <div class="row">
+
+
+    <section class="section-padding col-lg-9 col-12 text-left ml-0">
+      <!-- Barre de recherche -->
+      <mat-form-field appearance="outline" class="w-100" color="primary">
+        <mat-label>Rechercher par nom</mat-label>
+        <input matInput placeholder="Rechercher par nom" [(ngModel)]="searchTerm" (input)="filterCompetitions()">
+
+
+
+      </mat-form-field>
+
+
+
+    <!-- Boutons en haut de la section -->
+      <!-- Boutons en haut de la section -->
+      <!-- Boutons en haut de la section -->
+      <div class="text-center mt-4">
+        <button type="submit" mat-flat-button color="primary" (click)="filterOnline()" class="custom-button">Online</button>
+        <button type="submit" mat-flat-button color="primary" (click)="filterOffline()" class="custom-button">Offline</button>
+        <button type="submit" mat-flat-button color="primary" (click)="openAddCompetitionForm()" class="custom-button">Add</button>
+      </div>
+
+
+      <br>
+      <br>
+
+
+      <div class="row">
+        <ng-container *ngFor="let competition of filteredCompetitions">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card competition-card mb-4" [ngClass]="{'finished': isCompetitionFinished(competition)}">
+              <div class="card-body text-center competition-item">
+                <h3 class="main_nav_item"><strong>{{ competition.name }}</strong></h3>
+                <p class="main_nav_item"><strong>Description :</strong> {{ competition.description }}</p>
+                <p class="competition-info"><strong>Date de début :</strong> {{ competition.startDate | date:'mediumDate' }}</p>
+                <p class="competition-info"><strong>Date de fin :</strong> {{ competition.endDate | date:'mediumDate' }}</p>
+                <p class="competition-info"><strong>Lieu :</strong> {{ competition.location }}</p>
+                <div class="actions">
+                  <!-- Icône pour l'édition -->
+                  <mat-icon class="custom-icon" (click)="editCompetition(competition.idC)">edit</mat-icon>
+
+
+                  <!-- Bouton et icône pour la suppression -->
+                    <mat-icon class="custom-icon"  (click)="deleteCompetition(competition.idC)">delete</mat-icon>
+
+
+                  <!-- Bouton et icône pour les badges -->
+
+                    <mat-icon class="custom-icon"(click)="navigateToBadges(competition.idC)">badge</mat-icon>
+
+
+                  <!-- Bouton et icône pour les utilisateurs -->
+
+                    <mat-icon class="custom-icon"(click)="navigateToUsers(competition.idC)">people</mat-icon>
+
+
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </section>
+  </div>
+</div>

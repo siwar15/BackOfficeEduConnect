@@ -1,0 +1,6 @@
+.transparent-input {
+  background-color: transparent; /* Fond transparent pour le champ de saisie */
+  border: none; /* Supprimer la bordure */
+  opacity: 0.5; /* Opacité réduite pour le champ de saisie */
+  color: #000; /* Couleur du texte pour assurer la visibilité */
+}

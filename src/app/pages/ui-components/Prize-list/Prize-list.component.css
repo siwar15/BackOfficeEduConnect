@@ -1,0 +1,35 @@
+/* Effet 3D */
+.type_image_3d {
+  transition: transform 0.3s ease-in-out;
+}
+
+.type_caption_3d {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ajout de l'effet 3D lors du survol */
+.type_image_3d:hover {
+  transform: perspective(1000px) rotateX(-5deg) rotateY(5deg);
+}
+
+.type_caption_3d:hover {
+  transform: perspective(1000px) rotateX(-5deg) rotateY(5deg);
+}/* Ajoutez ces styles à votre feuille de style CSS */
+
+/* Largeur des colonnes du tableau */
+.table th {
+  width: 100%; /* Ajustez la largeur selon vos besoins */
+}
+
+.table th:nth-child(2) {
+  width: 40%; /* Ajustez la largeur selon vos besoins */
+}
+
+.table th:nth-child(3) {
+  width: 25%; /* Ajustez la largeur selon vos besoins */
+}
+
+.table th:nth-child(4) {
+  width: 25%; /* Ajustez la largeur selon vos besoins */
+}
+

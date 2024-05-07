@@ -1,0 +1,125 @@
+./* CSS */
+.custom-buttonn {
+  margin-right: 30px; /* Espacement entre les boutons */
+  /* Couleur de fond initiale */
+  transition: background-color 0.3s ease; /* Transition en douceur */
+}
+/* CSS pour les boutons bleus */
+.custom-buttonn.blue-button {
+  background-color: blue; /* Couleur de fond initiale */
+}
+
+.custom-buttonn.blue-button:hover {
+  background-color: navy; /* Couleur de fond au survol */
+}
+
+.custom-buttonn.blue-button:hover mat-icon {
+  color: navy; /* Couleur de l'icône au survol */
+}
+
+
+.custom-buttonn:hover {
+  background-color: blue; /* Couleur de fond au survol */
+}
+
+.custom-buttonn:hover mat-icon {
+  color: blue; /* Couleur de l'icône au survol */
+}
+
+/* Ajoutez une couleur gris clair au survol de la souris */
+.competition-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Ajoutez une couleur rouge aux compétitions terminées */
+.competition-card.finished {
+  border-color: #ff0000;
+}.competition-card {
+   background-color: #fff;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   padding: 20px;
+   margin-bottom: 20px; /* Ajoute de l'espace entre les compétitions */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, border-color 0.3s ease; /* Ajoute la transition pour le tournoiement et le changement de couleur */
+ }
+
+.competition-card:hover {
+  transform: rotateY(10deg);
+}
+
+
+.finished {
+  border: 2px solid red; /* Bordure rouge pour les compétitions terminées */
+  /* Ajoutez d'autres styles pour les compétitions terminées selon vos besoins */
+}
+
+.finished:hover {
+  background-color: #ffcccc; /* Change la couleur de fond en rouge au survol */
+}
+.main_nav_item {
+  color: black; /* Couleur du texte en noir */
+  font-weight: bold; /* Poids de la police en gras */
+}
+.left-align {
+  margin-left: 0; /* Supprimer la marge à gauche */
+  text-align: left; /* Aligner le texte à gauche */
+}
+/* CSS */
+/* CSS */
+.custom-buttonn {
+  margin-right: 30px; /* Espacement entre les boutons */
+  background-color: white; /* Couleur de fond initiale */
+  transition: background-color 0.3s ease; /* Transition en douceur */
+}
+
+.custom-buttonn:hover {
+  background-color: blue  !important; /* Couleur de fond au survol */
+}
+/* CSS */
+.custom-icon {
+  color: black; /* Couleur des icônes par défaut */
+  transition: color 0.3s ease; /* Transition en douceur */
+}
+
+.custom-icon:hover {
+  color: blue; /* Couleur des icônes au survol */
+}
+/* Style de la barre de recherche */
+.input-group {
+  width: 100%; /* Occupera toute la largeur de la section */
+}
+
+/* Style du bouton Effacer */
+.input-group-append button {
+  background-color: blue; /* Couleur de fond bleue */
+  color: white; /* Couleur du texte en blanc */
+}
+
+/* Style du texte dans la barre de recherche */
+.input-group input {
+  border-radius: 0; /* Supprime les coins arrondis */
+}
+/* Style des boutons personnalisés */
+.custom-button {
+  background-color: #2063F1; /* Couleur de fond bleue */
+  color: #FFFFFF; /* Couleur du texte en blanc */
+  border: none; /* Suppression de la bordure */
+  padding: 10px 20px; /* Espacement interne */
+  border-radius: 5px; /* Coins arrondis */
+  font-size: 16px; /* Taille de police */
+  cursor: pointer; /* Curseur pointeur */
+  transition: all 0.3s ease; /* Transition fluide */
+}
+
+/* Style des boutons au survol */
+.custom-button:hover {
+  background-color: #1A4DA1; /* Couleur de fond bleue plus foncée */
+}
+
+/* Ajout d'un espace entre les boutons */
+.custom-button + .custom-button {
+  margin-left: 20px; /* Espacement entre les boutons */
+}
+
+

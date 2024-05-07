@@ -13,20 +13,22 @@ export const navItems: NavItem[] = [
     navCap: 'Ui Components',
   },
   {
-    displayName: 'Badge',
+    displayName: 'competition',
     iconName: 'rosette',
-    route: '/ui-components/badge',
+    route: '/ui-components/competition',
   },
   {
-    displayName: 'Chips',
+    displayName: 'prizes',
     iconName: 'poker-chip',
-    route: '/ui-components/chips',
+    route: '/ui-components/Prize',
   },
+
   {
-    displayName: 'Lists',
+    displayName: 'Statistiques',
     iconName: 'list',
-    route: '/ui-components/lists',
+    route: '/ui-components/stat',
   },
+
   {
     displayName: 'Menu',
     iconName: 'layout-navbar-expand',

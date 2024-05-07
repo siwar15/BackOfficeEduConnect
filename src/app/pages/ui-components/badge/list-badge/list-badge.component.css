@@ -1,0 +1,36 @@
+/* afficher-badge.component.css */
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.badge-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.badge-item {
+  position: relative;
+  perspective: 1000px;
+  transition: transform 0.5s;
+}
+
+.badge-item:hover {
+  transform: rotateY(20deg);
+}
+
+.badge-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(60, 60, 60, 0.5);/* Couleur à modifier selon vos préférences */
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+
+.badge-item:hover::before {
+  opacity: 1;
+}

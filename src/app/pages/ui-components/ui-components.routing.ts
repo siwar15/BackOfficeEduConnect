@@ -12,26 +12,32 @@ import { CourseUpdateComponent } from './course-update/course-update.component';
 import { DocumentComponent } from './document/document.component';
 import { DocumentFormComponent } from './document-form/document-form.component';
 import { DocumentUpdateComponent } from './document-update/document-update.component';
+import {AffichercompetitionComponent} from "./affichercompetition/affichercompetition.component";
+import {ListBadgeComponent} from "./badge/list-badge/list-badge.component";
+import {PrizeListComponent} from "./Prize-list/Prize-list.component";
+import {StatComponent} from "./stat/stat.component";
 
 export const UiComponentsRoutes: Routes = [
   {
+
     path: '',
     children: [
       {
-        path: 'badge',
-        component: AppBadgeComponent,
+        path: 'competition',
+        component: AffichercompetitionComponent,
       },
+
       {
-        path: 'chips',
-        component: AppChipsComponent,
+        path: 'Prize',
+        component: PrizeListComponent,
       },
       {
         path: 'lists',
         component: AppListsComponent,
       },
       {
-        path: 'menu',
-        component: AppMenuComponent,
+        path: 'stat',
+        component: StatComponent,
       },
       {
         path: 'tooltips',
@@ -63,4 +69,5 @@ export const UiComponentsRoutes: Routes = [
       },
     ],
   },
+
 ];

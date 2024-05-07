@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-3">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-6 d-flex justify-content-center">
+    <form [formGroup]="badgeForm" (ngSubmit)="onSubmit()" class="m-t-30">
+
+
+      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">Nom de la competition :</mat-label>
+      <mat-form-field appearance="outline" class="w-100" color="primary">
+        <input matInput formControlName="competitionName" placeholder="Nom de la compétition" [disabled]="true">
+      </mat-form-field>
+
+      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">Nom :</mat-label>
+      <mat-form-field appearance="outline" class="w-100" color="primary">
+        <input matInput formControlName="name" placeholder="Nom du badge" required>
+      </mat-form-field>
+
+      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">Description :</mat-label>
+      <mat-form-field appearance="outline" class="w-100" color="primary">
+        <mat-select formControlName="description" placeholder="Sélectionner la description" required>
+          <mat-option value="BRONZE">BRONZE</mat-option>
+          <mat-option value="SILVER">SILVER</mat-option>
+          <mat-option value="GOLD">GOLD</mat-option>
+          <mat-option value="PLATINUM">PLATINUM</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+
+      <button type="submit" mat-flat-button color="primary" class="w-100">Ajouter</button>
+    </form>
+  </div>
+</div>

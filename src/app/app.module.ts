@@ -23,18 +23,19 @@ import { SidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import { HeaderComponent } from './layouts/full/header/header.component';
 import { BrandingComponent } from './layouts/full/sidebar/branding.component';
 import { AppNavItemComponent } from './layouts/full/sidebar/nav-item/nav-item.component';
+import {UicomponentsModule} from "./pages/ui-components/ui-components.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     FullComponent,
     BlankComponent,
-    SidebarComponent,
-    HeaderComponent,
-    BrandingComponent,
-    AppNavItemComponent,
+
+
+
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -43,8 +44,9 @@ import { AppNavItemComponent } from './layouts/full/sidebar/nav-item/nav-item.co
     ReactiveFormsModule,
     MaterialModule,
     TablerIconsModule.pick(TablerIcons),
+    UicomponentsModule,
   ],
-  exports: [TablerIconsModule],
+  exports: [TablerIconsModule, FullComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
