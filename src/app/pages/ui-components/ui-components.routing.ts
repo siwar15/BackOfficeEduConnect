@@ -6,6 +6,7 @@ import { AppChipsComponent } from './chips/chips.component';
 import { AppListsComponent } from './lists/lists.component';
 import { AppMenuComponent } from './menu/menu.component';
 import { AppTooltipsComponent } from './tooltips/tooltips.component';
+import { ChatroomComponent } from './chatroom/chatroom.component';
 
 export const UiComponentsRoutes: Routes = [
   {
@@ -31,6 +32,12 @@ export const UiComponentsRoutes: Routes = [
         path: 'tooltips',
         component: AppTooltipsComponent,
       },
+      {
+        path: 'chatroom',
+        component: ChatroomComponent,
+      },
+      
+      
     ],
   },
 ];
