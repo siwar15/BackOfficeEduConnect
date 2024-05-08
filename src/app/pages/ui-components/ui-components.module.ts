@@ -41,6 +41,8 @@ import {BrandingComponent} from "../../layouts/full/sidebar/branding.component";
 import {StatComponent} from "./stat/stat.component";
 import {PrizeListComponent} from "./Prize-list/Prize-list.component";
 import { ChatroomComponent } from './chatroom/chatroom.component';
+import { QuestionsListComponent } from './questions-list/questions-list.component';
+import { TopOneQsComponent } from './top-one-qs/top-one-qs.component';
 
 @NgModule({
   imports: [
@@ -85,6 +87,8 @@ import { ChatroomComponent } from './chatroom/chatroom.component';
     DocumentUpdateComponent,
     CourseDetailsComponent,
     ChatroomComponent,
+    QuestionsListComponent,
+    TopOneQsComponent,
   ],
   exports: [
     HeaderComponent,

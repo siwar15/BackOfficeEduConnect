@@ -7,6 +7,8 @@ import {AddBadgeComponent} from "./pages/ui-components/badge/add-badge/add-badge
 import {EditercompetitionComponent} from "./pages/ui-components/editercompetition/editercompetition.component";
 import {ListUserComponent} from "./pages/ui-components/user/list-user/list-user.component";
 import {AffichercompetitionComponent} from "./pages/ui-components/affichercompetition/affichercompetition.component";
+import { QuestionsListComponent } from './pages/ui-components/questions-list/questions-list.component';
+import { TopOneQsComponent } from './pages/ui-components/top-one-qs/top-one-qs.component';
 
 const routes: Routes = [
   {
@@ -58,6 +60,10 @@ const routes: Routes = [
   { path: 'ajouter-badge/:idCompet', component: AddBadgeComponent },
   { path: 'users/:id', component: ListUserComponent },
   { path: 'compet', component: AffichercompetitionComponent },
+  { path: 'question', component: QuestionsListComponent },
+  { path: 'Topquestion', component: TopOneQsComponent },
+
+
 
 ];
 

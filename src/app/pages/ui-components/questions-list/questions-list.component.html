@@ -1,0 +1,29 @@
+<mat-card class="cardWithShadow theme-card">
+    <mat-card-header class="bg-light-blue">
+      <h1 class="mat-card-title m-b-0" style="text-align: center;">Liste des questions</h1>
+    </mat-card-header>
+    <mat-card-content class="b-t-1 bg-white">
+      <div *ngIf="listeQ && listeQ.length > 0; else noQuestions">
+        <mat-grid-list cols="2" rowHeight="2:1">
+          <mat-grid-tile *ngFor="let question of listeQ">
+            <mat-card class="b-1 shadow-none bg-light-blue">
+              <mat-card-content>
+                <h3>{{ question.title }}</h3>
+                <p>{{ question.body }}</p>
+                <p>Créée le : {{ question.createdDate | date }}</p>
+                <!-- Bouton Supprimer -->
+                <button mat-raised-button color="warn" (click)="DeleteQs(question.id)">
+                  Supprimer
+                </button>
+              </mat-card-content>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+  
+      <ng-template #noQuestions>
+        <p class="text-muted">Aucune question trouvée.</p>
+      </ng-template>
+    </mat-card-content>
+  </mat-card>
+  

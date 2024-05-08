@@ -1,0 +1,39 @@
+<div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Top One Question</h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <thead class="bg-light">
+                  <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Body</th>
+                    <th scope="col">Created Date</th>
+                    <th scope="col">Number of Answers</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <ng-container *ngIf="topQuestion">
+                    <tr>
+                      <td>{{ topQuestion.title }}</td>
+                      <td>{{ topQuestion.body }}</td>
+                      <td>{{ topQuestion.createdDate | date }}</td>
+                      <td>{{ topQuestion.answers.length }}</td>
+                    </tr>
+                  </ng-container>
+                  <tr *ngIf="!topQuestion">
+                    <td colspan="4" class="text-center">No top question found.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
