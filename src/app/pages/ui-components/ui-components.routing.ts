@@ -17,6 +17,8 @@ import {ListBadgeComponent} from "./badge/list-badge/list-badge.component";
 import {PrizeListComponent} from "./Prize-list/Prize-list.component";
 import {StatComponent} from "./stat/stat.component";
 import { ChatroomComponent } from './chatroom/chatroom.component';
+import {AddQuestionComponent} from "./add-question/add-question.component";
+
 
 export const UiComponentsRoutes: Routes = [
   {
@@ -67,7 +69,10 @@ export const UiComponentsRoutes: Routes = [
       {
         path: 'updatedocument/:documentID',
         component: DocumentUpdateComponent,
-      },
+      },{
+        path : 'addQuestion',
+        component: AddQuestionComponent,
+        },
       {
         path: 'chatroom',
         component: ChatroomComponent,

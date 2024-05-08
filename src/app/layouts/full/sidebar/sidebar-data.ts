@@ -22,7 +22,12 @@ export const navItems: NavItem[] = [
     iconName: 'poker-chip',
     route: '/ui-components/Prize',
   },
- 
+  {
+    displayName: 'AddQuestion',
+    iconName: 'poker-chip',
+    route: '/addQuestion',
+  },
+
 
   {
     displayName: 'Statistiques',
@@ -86,5 +91,5 @@ export const navItems: NavItem[] = [
     iconName: 'aperture',
     route: '/ui-components/document',
   },
- 
+
 ];

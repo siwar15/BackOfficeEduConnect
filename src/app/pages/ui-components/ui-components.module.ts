@@ -30,7 +30,7 @@ import {EditercompetitionComponent} from "./editercompetition/editercompetition.
 import {ListBadgeComponent} from "./badge/list-badge/list-badge.component";
 import {AddBadgeComponent} from "./badge/add-badge/add-badge.component";
 import {AffichercompetitionComponent} from "./affichercompetition/affichercompetition.component";
-import {AppModule} from "../../app.module";
+
 
 import {NgApexchartsModule} from "ng-apexcharts";
 import {CompetitionAddComponent} from "./Ajoutcompetition/competition-add.component";
@@ -43,6 +43,7 @@ import {PrizeListComponent} from "./Prize-list/Prize-list.component";
 import { ChatroomComponent } from './chatroom/chatroom.component';
 import { QuestionsListComponent } from './questions-list/questions-list.component';
 import { TopOneQsComponent } from './top-one-qs/top-one-qs.component';
+import {AddQuestionComponent} from "./add-question/add-question.component";
 
 @NgModule({
   imports: [
@@ -57,6 +58,7 @@ import { TopOneQsComponent } from './top-one-qs/top-one-qs.component';
 
     NgApexchartsModule,
     NgApexchartsModule,
+
 
 
   ],
@@ -89,6 +91,8 @@ import { TopOneQsComponent } from './top-one-qs/top-one-qs.component';
     ChatroomComponent,
     QuestionsListComponent,
     TopOneQsComponent,
+    AddQuestionComponent,
+
   ],
   exports: [
     HeaderComponent,

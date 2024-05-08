@@ -9,6 +9,8 @@ import {ListUserComponent} from "./pages/ui-components/user/list-user/list-user.
 import {AffichercompetitionComponent} from "./pages/ui-components/affichercompetition/affichercompetition.component";
 import { QuestionsListComponent } from './pages/ui-components/questions-list/questions-list.component';
 import { TopOneQsComponent } from './pages/ui-components/top-one-qs/top-one-qs.component';
+import {AddQuestionComponent} from "./pages/ui-components/add-question/add-question.component";
+
 
 const routes: Routes = [
   {
@@ -62,6 +64,8 @@ const routes: Routes = [
   { path: 'compet', component: AffichercompetitionComponent },
   { path: 'question', component: QuestionsListComponent },
   { path: 'Topquestion', component: TopOneQsComponent },
+  {path:'addQuestion',component:AddQuestionComponent},
+
 
 
 
